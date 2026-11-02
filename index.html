@@ -76,6 +76,29 @@
   .svc li::before{content:"";width:16px;height:16px;flex:none;margin-top:3px;border-radius:50%;background:var(--gold-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.2 2.2 4.8-4.8' stroke='%23B08D57' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
   @media(max-width:900px){.services .grid{grid-template-columns:1fr}}
 
+  .care{background:var(--white);border-top:1px solid var(--line)}
+  .care .top{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:54px}
+  .care .top .head{margin-bottom:0}
+  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+  .tier{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:36px 32px;display:flex;flex-direction:column;gap:18px}
+  .tier h3{font-size:27px}
+  .tier .for{color:var(--gray);font-size:15px;margin-top:-10px}
+  .tier .price{display:flex;align-items:baseline;gap:6px;border-bottom:1px solid var(--line);padding-bottom:18px}
+  .tier .price b{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:600;line-height:1}
+  .tier .price span{color:var(--gray);font-size:15px}
+  .tier ul{list-style:none;display:grid;gap:10px;font-size:14.5px}
+  .tier li{display:flex;gap:10px;align-items:flex-start}
+  .tier li::before{content:"";width:16px;height:16px;flex:none;margin-top:3px;border-radius:50%;background:var(--gold-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.2 2.2 4.8-4.8' stroke='%23B08D57' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+  .tier li.muted{color:var(--gray)}
+  .tier.featured{background:var(--navy);color:var(--white);border-color:var(--navy)}
+  .tier.featured .for,.tier.featured .price span{color:rgba(255,255,255,.72)}
+  .tier.featured .price{border-color:rgba(255,255,255,.18)}
+  .tier .badge{position:absolute;top:-13px;left:32px;background:var(--gold);color:var(--white);font-size:11.5px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+  .care .note{color:var(--gray);font-size:14.5px;margin-top:26px}
+  .oneoff{display:flex;flex-wrap:wrap;gap:12px 34px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line);font-size:15px}
+  .oneoff strong{color:var(--navy)}
+  @media(max-width:900px){.tiers{grid-template-columns:1fr;max-width:520px}}
+
   .process{background:var(--gold-soft)}
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s}
   .step{position:relative;padding-top:58px}
@@ -137,6 +160,7 @@
     </a>
     <ul>
       <li><a href="#services">Services</a></li>
+      <li><a href="#care">Website Care</a></li>
       <li><a href="#process">How It Works</a></li>
       <li><a href="#work">Work</a></li>
       <li><a href="#about">About</a></li>
@@ -179,7 +203,7 @@
           <li>Custom website design and build</li>
           <li>Domain, DNS, and SSL setup</li>
           <li>Donation, sign-up, and contact forms</li>
-          <li>Optional monthly care: uptime, domain, and SSL monitoring plus small content edits</li>
+          <li><a href="#care" style="border-bottom:1.5px solid var(--gold)">Monthly Website Care plans from $150</a></li>
         </ul>
       </div>
       <div class="svc">
@@ -204,6 +228,65 @@
           <li>Program launch and meeting support</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="care" id="care">
+  <div class="wrap">
+    <div class="top">
+      <div class="head">
+        <span class="eyebrow">Website Care</span>
+        <h2>Your website, handled. Every month.</h2>
+        <p>Flat monthly care for local businesses and nonprofits across the South Suburbs and Northwest Indiana. Month to month, cancel with 30 days notice.</p>
+      </div>
+      <a href="#contact" class="btn btn-navy">Get a Free Site Check</a>
+    </div>
+    <div class="tiers">
+      <div class="tier">
+        <h3>Essentials</h3>
+        <p class="for">Keep it safe and running.</p>
+        <div class="price"><b>$150</b><span>/ month</span></div>
+        <ul>
+          <li>Uptime, domain, and SSL monitoring</li>
+          <li>Monthly updates, with a backup first</li>
+          <li>Monthly one-page report</li>
+          <li class="muted">Content edits billed hourly</li>
+        </ul>
+      </div>
+      <div class="tier featured">
+        <span class="badge">Most popular</span>
+        <h3>Care Plan</h3>
+        <p class="for">Everything handled, edits included.</p>
+        <div class="price"><b>$250</b><span>/ month</span></div>
+        <ul>
+          <li>Everything in Essentials</li>
+          <li>Up to 1 hour of content edits</li>
+          <li>Monthly review of hours, events, and notices</li>
+          <li>Monthly broken link check</li>
+          <li>2 business day response</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <h3>Growth</h3>
+        <p class="for">Care plus a site that keeps working for you.</p>
+        <div class="price"><b>$450</b><span>/ month</span></div>
+        <ul>
+          <li>Everything in Care Plan</li>
+          <li>Up to 3 hours of content edits</li>
+          <li>Google Business Profile updates</li>
+          <li>One news or blog post a month</li>
+          <li>Quarterly strategy call</li>
+        </ul>
+      </div>
+    </div>
+    <div class="oneoff">
+      <span><strong>One-time services:</strong></span>
+      <span>Free site check</span>
+      <span>Site refresh <strong>$150</strong></span>
+      <span>Security cleanup <strong>from $350</strong></span>
+      <span>Page redesign <strong>from $400</strong></span>
+      <span>New website <strong>quoted</strong></span>
     </div>
   </div>
 </section>
